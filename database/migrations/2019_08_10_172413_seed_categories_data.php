@@ -17,7 +17,7 @@ class SeedCategoriesData extends Migration
                 'name'        => '男科',
                 'description' => '男科',
             ],
-            
+
         ];
 
         DB::table('categories')->insert($categories);
