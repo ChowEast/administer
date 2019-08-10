@@ -16,6 +16,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
 
+    protected $policies = [
+        'App\Model' => 'App\Policies\ModelPolicy',
+        \App\Models\User::class  => \App\Policies\UserPolicy::class,
+    ];
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
