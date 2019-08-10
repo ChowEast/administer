@@ -2,6 +2,8 @@
 
 Route::get('/', 'PagesController@root')->name('root');
 
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
